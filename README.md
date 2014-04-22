@@ -17,7 +17,7 @@ return false
 
 ### preventEmbedded()
 
-Redirect to the right page if embedded
+Redirect to the right page if embedded.
 
 ```
 Brower.preventEmbedded()
@@ -25,7 +25,7 @@ Brower.preventEmbedded()
 
 ### isEmbedded()
 
-Tell you if the page is embedded (iframe) or not.git
+Tell you if the page is embedded (iframe) or not.
 
 ```
 Brower.isEmbedded()
