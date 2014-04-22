@@ -1,4 +1,4 @@
-;(function( win ) {
+;(function( win, dom ) {
 
   win.Browser = {
     visit: function( url ) {

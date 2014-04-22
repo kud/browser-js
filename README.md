@@ -11,7 +11,7 @@ Type: `String`
 Redirect to the url given.
 
 ```
-Brower.visit('http://example.com')
+Browser.visit('http://example.com')
 return false
 ```
 
@@ -20,7 +20,7 @@ return false
 Redirect to the right page if embedded.
 
 ```
-Brower.preventEmbedded()
+Browser.preventEmbedded()
 ```
 
 ### isEmbedded()
@@ -28,6 +28,6 @@ Brower.preventEmbedded()
 Tell you if the page is embedded (iframe) or not.
 
 ```
-Brower.isEmbedded()
+Browser.isEmbedded()
 ```
 
