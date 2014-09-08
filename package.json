@@ -1,0 +1,20 @@
+{
+  "name": "browser-js",
+  "version": "1.0.0",
+  "description": "A sugar for your browser.",
+  "main": "browser.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kud/browser-js.git"
+  },
+  "keywords": [
+    "browser",
+    "sugar"
+  ],
+  "author": "Erwann Mest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kud/browser-js/issues"
+  },
+  "homepage": "http://mdwn.in/gh/kud/browser-js"
+}
