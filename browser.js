@@ -5,9 +5,13 @@
       window.location.href = url
     },
 
+    redirectParent: function() {
+      window.top.location.href = window.location.href
+    },
+
     preventEmbedded: function() {
       if ( this.isEmbedded() ) {
-        window.top.location.href = window.location.href
+        this.redirectParent()
       }
     },
 

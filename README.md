@@ -12,7 +12,14 @@ Redirect to the url given.
 
 ```
 Browser.visit('http://example.com')
-return false
+```
+
+### redirectParent()
+
+Redirect the parent to the right url.
+
+```
+Browser.redirectParent()
 ```
 
 ### preventEmbedded()
