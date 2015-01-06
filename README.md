@@ -14,6 +14,16 @@ Redirect to the url given.
 Browser.visit('http://example.com')
 ```
 
+### parentVisit( url )
+
+Type: `String`
+
+Parent redirect to the url given
+
+```
+Browser.parentVisit('http://example.com')
+```
+
 ### redirectParent()
 
 Redirect the parent to the right url.
@@ -37,4 +47,10 @@ Tell you if the page is embedded (iframe) or not.
 ```
 Browser.isEmbedded()
 ```
+
+## Changelog
+
+- 06/01/2015
+  + Add `parentVisit()`
+
 

@@ -5,6 +5,10 @@
       window.location.href = url
     },
 
+    parentVisit: function( url ) {
+      window.top.location.href = url
+    },
+
     redirectParent: function() {
       window.top.location.href = window.location.href
     },
