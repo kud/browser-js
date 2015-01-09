@@ -1,30 +1,28 @@
-;(function( win, dom ) {
+module.exports = {
 
-  win.Browser = {
-    visit: function( url, parent ) {
-      var parent = parent || false
+  visit: function( url, parent ) {
+    var parent = parent || false
 
-      if ( parent ) window.top.location.href = url
-      else window.location.href = url
-    },
+    if ( parent ) window.top.location.href = url
+    else window.location.href = url
+  },
 
-    newTab: function( url ) {
-      window.open(url,'_blank')
-    }
-
-    redirectToOriginal: function() {
-      window.top.location.href = window.location.href
-    },
-
-    preventEmbedded: function() {
-      if ( this.isEmbedded() ) {
-        this.redirectToOriginal()
-      }
-    },
-
-    isEmbedded: function() {
-      return window.top !== window.self
-    }
+  newTab: function( url ) {
+    window.open(url,'_blank')
   }
 
-})( window, window.document )
+  redirectToOriginal: function() {
+    window.top.location.href = window.location.href
+  },
+
+  preventEmbedded: function() {
+    if ( this.isEmbedded() ) {
+      this.redirectToOriginal()
+    }
+  },
+
+  isEmbedded: function() {
+    return window.top !== window.self
+  }
+
+}

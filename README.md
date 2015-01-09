@@ -46,6 +46,9 @@ Browser.isEmbedded()
 
 ## Changelog
 
+- 09/01/2015 — 1.4.0
+  + Now only CommonJS is supported.
+
 - 09/01/2015 — 1.3.0
   + Replace `parentVisit()` by `visit( url, true )`
   + Replace `redirectParent()` by `redirectToOriginal()`
