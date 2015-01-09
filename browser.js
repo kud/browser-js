@@ -1,15 +1,15 @@
 module.exports = {
 
-  visit: function( url, parent ) {
-    var parent = parent || false
+  visit: function( url, top ) {
+    var top = top || false
 
-    if ( parent ) window.top.location.href = url
+    if ( top ) window.top.location.href = url
     else window.location.href = url
   },
 
   newTab: function( url ) {
     window.open(url,'_blank')
-  }
+  },
 
   redirectToOriginal: function() {
     window.top.location.href = window.location.href
