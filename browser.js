@@ -1,21 +1,24 @@
 ;(function( win, dom ) {
 
   win.Browser = {
-    visit: function( url ) {
-      window.location.href = url
+    visit: function( url, parent ) {
+      var parent = parent || false
+
+      if ( parent ) window.top.location.href = url
+      else window.location.href = url
     },
 
-    parentVisit: function( url ) {
-      window.top.location.href = url
-    },
+    newTab: function( url ) {
+      window.open(url,'_blank')
+    }
 
-    redirectParent: function() {
+    redirectToOriginal: function() {
       window.top.location.href = window.location.href
     },
 
     preventEmbedded: function() {
       if ( this.isEmbedded() ) {
-        this.redirectParent()
+        this.redirectToOriginal()
       }
     },
 

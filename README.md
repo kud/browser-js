@@ -4,37 +4,33 @@
 
 ## API
 
-### visit( url )
+### visit( url, top )
 
-Type: `String`
-
-Redirect to the url given.
+Redirect to the url given. If top as true, it'll redirect the top window.
 
 ```
-Browser.visit('http://example.com')
+Browser.visit('http://example.com', true)
 ```
 
-### parentVisit( url )
+### newTab( url )
 
-Type: `String`
-
-Parent redirect to the url given
+Open a new tab.
 
 ```
-Browser.parentVisit('http://example.com')
+Browser.newTab('http://example.com')
 ```
 
-### redirectParent()
+### redirectToOriginal()
 
-Redirect the parent to the right url.
+Redirect the main window to the url of the iframe.
 
 ```
-Browser.redirectParent()
+Browser.redirectToOriginal()
 ```
 
 ### preventEmbedded()
 
-Redirect to the right page if embedded.
+Avoid the website as iframe.
 
 ```
 Browser.preventEmbedded()
@@ -42,7 +38,7 @@ Browser.preventEmbedded()
 
 ### isEmbedded()
 
-Tell you if the page is embedded (iframe) or not.
+Check if your website is embedded (iframe) or not.
 
 ```
 Browser.isEmbedded()
@@ -50,7 +46,12 @@ Browser.isEmbedded()
 
 ## Changelog
 
-- 06/01/2015
+- 09/01/2015 — 1.3.0
+  + Replace `parentVisit()` by `visit( url, true )`
+  + Replace `redirectParent()` by `redirectToOriginal()`
+  + Add `newTab()` to open a new tab. Thank you captain obvious.
+
+- 06/01/2015 — 1.2.0
   + Add `parentVisit()`
 
 
