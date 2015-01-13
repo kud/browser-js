@@ -23,6 +23,10 @@ module.exports = {
 
   isEmbedded: function() {
     return window.top !== window.self
+  },
+
+  isPoppedUp: function() {
+    return !(window.opener === null || window.opener === undefined)
   }
 
 }

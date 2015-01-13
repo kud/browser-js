@@ -44,7 +44,18 @@ Check if your website is embedded (iframe) or not.
 Browser.isEmbedded()
 ```
 
+### isPoppedUp()
+
+Check if your website is in a popup or not.
+
+```
+Browser.isPoppedUp()
+```
+
 ## Changelog
+
+- 13/01/2015 — 1.5.0
+  + Add `isPoppedUp()` to check if your website is in a popup or not.
 
 - 09/01/2015 — 1.4.0
   + Now only CommonJS is supported.
