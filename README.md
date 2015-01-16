@@ -20,6 +20,14 @@ Open a new tab.
 Browser.newTab('http://example.com')
 ```
 
+### reload( forced )
+
+Reload the page. If forced is true, so it will reload without using caches.
+
+```
+Browser.reload('http://example.com')
+```
+
 ### redirectToOriginal()
 
 Redirect the main window to the url of the iframe.
@@ -53,6 +61,9 @@ Browser.isPoppedUp()
 ```
 
 ## Changelog
+
+- 16/01/2015 — 1.6.0
+  + Add `reload()` to reload the page.
 
 - 13/01/2015 — 1.5.0
   + Add `isPoppedUp()` to check if your website is in a popup or not.

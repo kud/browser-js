@@ -11,6 +11,11 @@ module.exports = {
     window.open(url,'_blank')
   },
 
+  reload: function( forced ) {
+    var forced = forced || false
+    document.location.reload( forced )
+  },
+
   redirectToOriginal: function() {
     window.top.location.href = window.location.href
   },
