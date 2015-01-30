@@ -2,6 +2,28 @@
 
 > A sugar to handle your browser.
 
+## Installation
+
+```console
+$ npm install browser-js (--save)
+```
+
+## Usage
+
+### CommonJS
+
+```javascript
+var browser = require('browser-js')
+
+browser.visit('https://github.com/kud/browser-js')
+```
+
+### Global
+
+```javascript
+window.Browser.visit('https://github.com/kud/browser-js')
+```
+
 ## API
 
 ### visit( url, top )
