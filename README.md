@@ -1,6 +1,6 @@
 # Browser.js
 
-> A sugar for your browser.
+> A sugar to handle your browser.
 
 ## API
 
@@ -12,13 +12,17 @@ Redirect to the url given. If top as true, it'll redirect the top window.
 Browser.visit('http://example.com', true)
 ```
 
+### newWindow( url )
+
+Open a new window.
+
+```
+Browser.newWindow('http://example.com')
+```
+
 ### newTab( url )
 
-Open a new tab.
-
-```
-Browser.newTab('http://example.com')
-```
+Alias of `newWindow()`.
 
 ### reload( forced )
 
@@ -61,6 +65,9 @@ Browser.isPoppedUp()
 ```
 
 ## Changelog
+
+- 30/01/2015 — 1.7.0
+  + Add `newWindow()`, `newTab()` is now its alias.
 
 - 16/01/2015 — 1.6.0
   + Add `reload()` to reload the page.

@@ -1,7 +1,8 @@
-;(function (root, factory) {
+;(function(root, factory) {
   if (typeof exports === 'object') {
     module.exports = factory(require('browser-js'))
-  } else {
+  }
+  else {
     root.Browser = factory(root.Browser)
   }
 }(this, function () {
@@ -15,8 +16,12 @@
       else window.location.href = url
     },
 
+    newWindow: function( url ) {
+      window.open(url, '_blank')
+    },
+
     newTab: function( url ) {
-      window.open(url,'_blank')
+      this.newWindow( url )
     },
 
     reload: function( forced ) {

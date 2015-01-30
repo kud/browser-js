@@ -1,8 +1,8 @@
 {
   "name": "browser-js",
-  "version": "1.6.2",
-  "description": "A sugar for your browser.",
-  "main": "browser.js",
+  "version": "1.7.0",
+  "description": "A sugar to handle your browser.",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kud/browser-js.git"
