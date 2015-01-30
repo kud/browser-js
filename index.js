@@ -2,8 +2,7 @@
   if (typeof exports === 'object') {
     module.exports = factory(require('browser-js'))
   } else {
-    // root.returnExportsGlobal = factory(root.Browser) // sorry kids, I don't know how it really works so I added 'root.Browser'
-    root.Browser = root.returnExportsGlobal = factory(root.Browser)
+    root.Browser = factory(root.Browser)
   }
 }(this, function () {
 
