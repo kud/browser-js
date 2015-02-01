@@ -1,7 +1,9 @@
 ;(function(root, factory) {
+  // CommonJS
   if (typeof exports === 'object') {
     module.exports = factory(require('browser-js'))
   }
+  // Global
   else {
     root.Browser = factory(root.Browser)
   }
@@ -27,6 +29,10 @@
     reload: function( forced ) {
       var forced = forced || false
       document.location.reload( forced )
+    },
+
+    goBack: function() {
+      history.back(-1)
     },
 
     redirectToOriginal: function() {

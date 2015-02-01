@@ -46,6 +46,14 @@ Browser.newWindow('http://example.com')
 
 Alias of `newWindow()`.
 
+### goBack()
+
+Go to the previous page.
+
+```
+Browser.goBack()
+```
+
 ### reload( forced )
 
 Reload the page. If forced is true, so it will reload without using caches.
@@ -87,6 +95,9 @@ Browser.isPoppedUp()
 ```
 
 ## Changelog
+
+- 01/02/2015 — 1.8.0
+  + Add `goBack()` to go to the previous page.
 
 - 30/01/2015 — 1.7.0
   + Add `newWindow()`, `newTab()` is now its alias.
