@@ -34,6 +34,22 @@ Redirect to the url given. If top as true, it'll redirect the top window.
 Browser.visit('http://example.com', true)
 ```
 
+### reload( forced )
+
+Reload the page. If forced is true, so it will reload without using caches.
+
+```
+Browser.reload('http://example.com')
+```
+
+### goBack()
+
+Go to the previous page.
+
+```
+Browser.goBack()
+```
+
 ### newWindow( url )
 
 Open a new window.
@@ -46,20 +62,20 @@ Browser.newWindow('http://example.com')
 
 Alias of `newWindow()`.
 
-### goBack()
+### getParentUrl()
 
-Go to the previous page.
-
-```
-Browser.goBack()
-```
-
-### reload( forced )
-
-Reload the page. If forced is true, so it will reload without using caches.
+Returns the parent url. `undefined` if not in an iframe.
 
 ```
-Browser.reload('http://example.com')
+Browser.getParentUrl()
+```
+
+### getParentHostname()
+
+Returns the parent hostname. `undefined` if not in an iframe.
+
+```
+Browser.getParentHostname()
 ```
 
 ### redirectToOriginal()
@@ -95,6 +111,9 @@ Browser.isPoppedUp()
 ```
 
 ## Changelog
+
+- 02/02/2015 — 1.9.0
+  + Add `getParentUrl()`, `getParentHostname()`.
 
 - 01/02/2015 — 1.8.0
   + Add `goBack()` to go to the previous page.

@@ -1,6 +1,6 @@
 {
   "name": "browser-js",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "A sugar to handle your browser.",
   "main": "index.js",
   "repository": {

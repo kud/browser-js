@@ -1,4 +1,5 @@
 ;(function(root, factory) {
+
   // CommonJS
   if (typeof exports === 'object') {
     module.exports = factory(require('browser-js'))
@@ -7,6 +8,7 @@
   else {
     root.Browser = factory(root.Browser)
   }
+
 }(this, function () {
 
   return {
@@ -18,6 +20,15 @@
       else window.location.href = url
     },
 
+    reload: function( forced ) {
+      var forced = forced || false
+      document.location.reload( forced )
+    },
+
+    goBack: function() {
+      history.back(-1)
+    },
+
     newWindow: function( url ) {
       window.open(url, '_blank')
     },
@@ -26,13 +37,27 @@
       this.newWindow( url )
     },
 
-    reload: function( forced ) {
-      var forced = forced || false
-      document.location.reload( forced )
+    getParentUrl: function() {
+      var url = undefined // should it return the url when it's not in an iframe
+
+      if ( this.isEmbedded() ) {
+        url = document.referrer
+      }
+
+      return url
     },
 
-    goBack: function() {
-      history.back(-1)
+    getParentHostname: function() {
+      var url = this.getParentUrl()
+      var hostname = url
+
+      if ( url !== undefined ) {
+        var a = document.createElement('a')
+        a.href = url
+        hostname = a.hostname
+      }
+
+      return hostname
     },
 
     redirectToOriginal: function() {
