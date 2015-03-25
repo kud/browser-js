@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo</title>
+  <script src="../index.js"></script>
+</head>
+<body>
+  <ul>
+    <li><a href="#" class="kud-js-NewDefaultPopup">New default popup</a></li>
+    <li><a href="#" class="kud-js-NewNamedPopup">New named popup</a></li>
+    <li><a href="#" class="kud-js-NewCustomPopup">New custom popup</a></li>
+  </ul>
+
+  <script>
+    document.querySelector('.kud-js-NewDefaultPopup').addEventListener('click', function() {
+      Browser.newPopup({ url: 'http://google.fr' })
+    })
+
+    document.querySelector('.kud-js-NewNamedPopup').addEventListener('click', function() {
+      Browser.newPopup({ url: 'http://google.fr', name: 'Hello!' })
+    })
+
+    document.querySelector('.kud-js-NewCustomPopup').addEventListener('click', function() {
+      Browser.newPopup({ url: 'http://google.fr', options: { height: '758', width: '1024' } })
+    })
+  </script>
+</body>
+</html>

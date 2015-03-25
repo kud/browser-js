@@ -37,6 +37,43 @@
       this.newWindow( url )
     },
 
+    newPopup: function( opts ) {
+      // mandatory parameters
+      if ( typeof opts === 'undefined' || typeof opts.url == 'undefined' ) {
+        throw new Error('You must define at least an url.')
+      }
+
+      // handle default parameters
+      var options = {}
+
+      options.url = opts.url
+      options.name = opts.name || 'defaultPopup'
+
+      options.options = opts.options || {}
+
+      if ( typeof options.options.width === 'undefined' ) {
+        options.options.width = 640
+      }
+
+      if ( typeof options.options.height === 'undefined' ) {
+        options.options.height = 480
+      }
+
+      if ( options.options !== '' ) {
+        var str = ''
+
+        for ( var property in options.options ) {
+          if ( options.options.hasOwnProperty( property ) ) {
+            str += property + '=' + options.options[property] + ','
+          }
+        }
+
+        options.options = str.substr( 0, str.length-1 )
+      }
+
+      return window.open( options.url, opts.name, options.options )
+    },
+
     getParentUrl: function() {
       var url = undefined // should it return the url when it's not in an iframe
 
