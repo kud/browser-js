@@ -62,6 +62,14 @@ Browser.newWindow('http://example.com')
 
 Alias of `newWindow()`.
 
+### newPopup( opts )
+
+Open a new popup.
+
+```
+Browser.newPopup({ url: 'http://example.com', options: { height: '758', width: '1024' } })
+```
+
 ### getParentUrl()
 
 Returns the parent url. `undefined` if not in an iframe.
@@ -111,6 +119,9 @@ Browser.isPoppedUp()
 ```
 
 ## Changelog
+
+- 26/03/2015 — 1.10.0
+  + Add `newPopup()`. Also add some tests.
 
 - 02/02/2015 — 1.9.0
   + Add `getParentUrl()`, `getParentHostname()`.
