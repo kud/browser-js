@@ -59,17 +59,15 @@
         options.options.height = 480
       }
 
-      if ( options.options !== '' ) {
-        var str = ''
+      var str = ''
 
-        for ( var property in options.options ) {
-          if ( options.options.hasOwnProperty( property ) ) {
-            str += property + '=' + options.options[property] + ','
-          }
+      for ( var property in options.options ) {
+        if ( options.options.hasOwnProperty( property ) ) {
+          str += property + '=' + options.options[property] + ','
         }
-
-        options.options = str.substr( 0, str.length-1 )
       }
+
+      options.options = str.substr( 0, str.length-1 )
 
       return window.open( options.url, opts.name, options.options )
     },
