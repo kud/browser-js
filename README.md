@@ -39,7 +39,7 @@ Browser.visit('http://example.com', true)
 Reload the page. If forced is true, so it will reload without using caches.
 
 ```
-Browser.reload('http://example.com')
+Browser.reload()
 ```
 
 ### goBack()
